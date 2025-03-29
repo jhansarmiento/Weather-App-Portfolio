@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Compilation and cache files
+dist/
+.vite/
+.eslintcache
+*.log
+
+# Ignore sensible set up files
+.env
+.env.local
+.env.*.local
