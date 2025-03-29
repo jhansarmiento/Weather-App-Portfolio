@@ -1,12 +1,12 @@
 import './App.css'
+import Home from './pages/Home'
 
 function App() {
 
   return (
     <>
-      <p>
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1 className='text-2xl font-bold text-center mt-4'>Weather App</h1>
+      <Home />
     </>
   )
 }
