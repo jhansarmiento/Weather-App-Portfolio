@@ -3,6 +3,8 @@ export type CoordinatesType = {
     lon: number
 }
 
-export type WeatherType = {
-    temp: number
+export type getCurrentWeatherType = {
+    main: {
+        temp: number
+    }
 }

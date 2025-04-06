@@ -1,14 +1,13 @@
-import './App.css'
-import Home from './pages/Home'
+import "./App.css";
+import { useWeather } from "./services/UseWeather";
 
 function App() {
-
+  const weather = useWeather()
+  console.log(weather)
   return (
     <>
-      <h1 className='text-2xl font-bold text-center mt-4'>Weather App</h1>
-      <Home />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
