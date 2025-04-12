@@ -4,7 +4,7 @@ import { useWeather } from "./services/UseWeather";
 
 function App() {
 
-  async function Weather() {
+  const Weather = async () => {
     const { main: weather } = await useWeather()
      console.log( "Temperatura: ", weather.temp, " Humedad: ", weather.humidity,)
   }
