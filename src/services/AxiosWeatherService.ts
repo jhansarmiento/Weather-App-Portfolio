@@ -32,6 +32,7 @@ export class AxiosWeatherService implements IHttpClient {
             }
 
             return {
+                name: data.name,
                 main: {
                     temp: data.main.temp,
                     humidity: data.main.humidity

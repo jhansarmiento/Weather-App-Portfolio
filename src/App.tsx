@@ -5,14 +5,17 @@ import { useWeather } from "./services/UseWeather";
 function App() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState({
-    temp: 0,
-    humidity: 0
+    name: "",
+    main: {
+      temp: 0,
+      humidity: 0
+    }
   });
 
   const Weather = async () => {
     if (!city) return;
-    const { main: weatherData } = await useWeather(city);
-    console.log("Temperature: ", weatherData.temp, " Humidity: ", weather.humidity);
+    const weatherData = await useWeather(city);
+    console.log("Temperature: ", weatherData.main.temp, " Humidity: ", weatherData.main.humidity);
     setWeather(weatherData);
   };
 
@@ -43,10 +46,11 @@ function App() {
         </div>
       </form>
 
-      {weather.temp !== 0 && (
+      {weather.main.temp !== 0 && (
         <div className="bg-white p-6 rounded-lg shadow-lg">
-          <p className="text-lg mb-2">Temperature: {weather.temp} °K</p>
-          <p className="text-lg">Humidity: {weather.humidity}%</p>
+          <p className="text-lg mb-2">City: {weather.name}</p>
+          <p className="text-lg mb-2">Temperature: {weather.main.temp} °K</p>
+          <p className="text-lg">Humidity: {weather.main.humidity}%</p>
         </div>
       )}
     </div>
