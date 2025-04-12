@@ -5,6 +5,7 @@ export type CoordinatesType = {
 
 export type getCurrentWeatherType = {
     main: {
-        temp: number
+        temp: number,
+        humidity: number
     }
 }
